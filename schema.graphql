@@ -1,0 +1,8 @@
+type AtomRegistered @entity(immutable: true) {
+  id: Bytes!
+  uid: Bytes! # bytes32
+  atom: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
