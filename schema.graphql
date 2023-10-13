@@ -6,3 +6,22 @@ type AtomRegistered @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type BondCreated @entity(immutable: true) {
+  id: Bytes!
+  atom: Bytes! # bytes32
+  element: Bytes! # address
+  atomUid: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UnBond @entity(immutable: true) {
+  id: Bytes!
+  atom: Bytes! # bytes32
+  element: Bytes! # address
+  atomUid: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

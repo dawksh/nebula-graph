@@ -22,3 +22,26 @@ dataSources:
         - event: AtomRegistered(indexed bytes32,indexed address)
           handler: handleAtomRegistered
       file: ./src/registry.ts
+  - kind: ethereum
+    name: Nebula
+    network: sepolia
+    source:
+      address: "0xf2807Be61bF5afF82361dA275BAba1467C5b9604"
+      abi: Nebula
+      startBlock: 4477338
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - BondCreated
+        - UnBond
+      abis:
+        - name: Nebula
+          file: ./abis/Nebula.json
+      eventHandlers:
+        - event: BondCreated(indexed bytes32,address,bytes32)
+          handler: handleBondCreated
+        - event: UnBond(indexed bytes32,address,bytes32)
+          handler: handleUnBond
+      file: ./src/nebula.ts

@@ -3,6 +3,9 @@
     "Registry": {
       "address": "0x184e1F7aeeD0c44cc7F8EA6cB14A598c09166352",
       "startBlock": 4477337
+    },
+    "Nebula": {
+      "address": "0xf2807Be61bF5afF82361dA275BAba1467C5b9604"
     }
   }
 }
