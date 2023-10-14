@@ -3,7 +3,7 @@ import { AtomRegistered } from "../generated/schema"
 
 export function handleAtomRegistered(event: AtomRegisteredEvent): void {
   let entity = new AtomRegistered(
-    event.transaction.hash.concatI32(event.logIndex.toI32())
+    event.params.uid
   )
   entity.uid = event.params.uid
   entity.atom = event.params.atom

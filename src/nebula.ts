@@ -6,7 +6,7 @@ import { BondCreated, UnBond } from "../generated/schema"
 
 export function handleBondCreated(event: BondCreatedEvent): void {
   let entity = new BondCreated(
-    event.transaction.hash.concatI32(event.logIndex.toI32())
+    event.params.atomUid
   )
   entity.atom = event.params.atom
   entity.element = event.params.element
@@ -21,7 +21,7 @@ export function handleBondCreated(event: BondCreatedEvent): void {
 
 export function handleUnBond(event: UnBondEvent): void {
   let entity = new UnBond(
-    event.transaction.hash.concatI32(event.logIndex.toI32())
+    event.params.atomUid
   )
   entity.atom = event.params.atom
   entity.element = event.params.element
